@@ -7,33 +7,33 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import com.hoteles.R
 import com.hoteles.databinding.FragmentHotelBinding
 import com.hoteles.viewmodel.HotelViewModel
 
 class HotelFragment : Fragment() {
 
     private var _binding: FragmentHotelBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
+
+    private lateinit var hotelViewModel: HotelViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val hotelViewModel =
+        hotelViewModel =
             ViewModelProvider(this).get(HotelViewModel::class.java)
 
         _binding = FragmentHotelBinding.inflate(inflater, container, false)
-        val root: View = binding.root
 
-        val textView: TextView = binding.textHome
-        hotelViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+        binding.addLugar.setOnClickListener{
+            findNavController().navigate(R.id.action_nav_hotel_to_addHotelFragment)
         }
-        return root
+
+        return binding.root
     }
 
     override fun onDestroyView() {

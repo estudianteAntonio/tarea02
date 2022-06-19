@@ -15,5 +15,16 @@
     <string name="menu_hotel">Hoteles</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="msg_nombre">Nombre del hotel</string>
+    <string name="msg_email">Correo (correodelhotel@xxxx.xxx)</string>
+    <string name="msg_telefono">Telefono (0000-0000)</string>
+    <string name="msg_direccion">Ubicacion del hotel</string>
+    <string name="bt_addHotel">Registrar</string>
+    <string name="msg_hotel_added">Hotel registrado</string>
+    <string name="msg_data">Falta informacion</string>
+
 
 </resources>

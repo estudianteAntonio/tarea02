@@ -13,7 +13,7 @@ data class Hotel(
     val id: Int,
     @ColumnInfo(name = "nombre")
     val nombre: String,
-    @ColumnInfo(name = "e-mail")
+    @ColumnInfo(name = "email")
     val email: String?,
     @ColumnInfo(name = "telefono")
     val telefono: String?,
