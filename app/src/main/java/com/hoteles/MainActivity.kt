@@ -34,7 +34,6 @@ class MainActivity : AppCompatActivity() {
         val email = binding.etEmail.text.toString()
         val pass = binding.etPassword.text.toString()
 
-        //Se usa la función para crear un usuario por medio de correo y contraseña
         auth.createUserWithEmailAndPassword(email,pass)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
